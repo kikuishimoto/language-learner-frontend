@@ -1,7 +1,7 @@
 
 const gotCategories = (categories) => {
     console.log("in action")
-    return { type: "GOT_CATAGORIES", payload: categories };
+    return { type: "GOT_CATEGORIES", payload: categories };
 }
 
 export const fetchCategories = () => {
