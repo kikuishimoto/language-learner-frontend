@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import Welcome from './Welcome'
-import PhrasesContainer from './Containers/PhrasesContainer'
-import CategoriesContainer from './Containers/CategoriesContainer'
-import TutorsContainer from './Containers/TutorsContainer'
-import ListsContainer from './Containers/ListsContainer'
+import PhrasesContainer from './containers/PhrasesContainer'
+import CategoriesContainer from './containers/CategoriesContainer'
+import TutorsContainer from './containers/TutorsContainer'
+import ListsContainer from './containers/ListsContainer'
 
 
 import {
