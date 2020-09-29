@@ -13,7 +13,7 @@ class CategoriesContainer extends Component {
         } else {
             allCategories = this.props.categoriesReducer.categories
         }
-        
+
         return allCategories.map((category) => {
             return <Categories key={category.id} category={category} />
         })
