@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-export default class TutorsContainer extends Component {
+
+class TutorsContainer extends Component {
     render() {
         return (
             <div>
@@ -8,4 +9,9 @@ export default class TutorsContainer extends Component {
             </div>
         )
     }
+    
 }
+const mapSateToProps = (state) => {
+    return state
+}
+export default connect(mapSateToProps)(TutorsContainer)
