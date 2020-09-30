@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Tutors from '../components/Tutors';
 import { connect } from 'react-redux';
 import { fetchTutors } from "../actions/tutorsActions";
+import TutorInput from "../components/TutorInput"
 
 
 
@@ -12,11 +13,11 @@ class TutorsContainer extends Component {
     }
     renderTutors() {
         let allTutors;
-        if (this.props.tutorsReducer.tutors.data) {
-            allTutors = this.props.tutorsReducer.tutors.data
-        } else {
-            allTutors = this.props.tutorsReducer.tutors
-        }
+        //if (this.props.tutorsReducer.tutors.data) {
+        allTutors = this.props.tutorsReducer.tutors
+        //} else {
+        //    allTutors = this.props.tutorsReducer.tutors
+        //}
         return allTutors.map((tutor) => {
             return <Tutors key={tutor.id} tutor={tutor} />
         })
@@ -25,6 +26,7 @@ class TutorsContainer extends Component {
     render() {
         return (
             <div>
+                <TutorInput />
                 {this.renderTutors()}
 
             </div>
