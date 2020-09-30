@@ -11,11 +11,11 @@ class PhrasesContainer extends React.Component {
 
     renderPhraseCards() {
             let allPhrases;
-            if (this.props.phraseReducer.phrases.data){
-                allPhrases = this.props.phraseReducer.phrases.data
-            } else {
-                allPhrases = this.props.phraseReducer.phrases
-            }
+            //if (this.props.phraseReducer.phrases.data){
+            allPhrases = this.props.phraseReducer.phrases
+            //} else {
+            //    allPhrases = this.props.phraseReducer.phrases
+            //}
             
             return allPhrases.map((phrase) => {
                 return <PhraseCard key={phrase.id} phrase={phrase} />
