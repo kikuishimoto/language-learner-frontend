@@ -1,4 +1,3 @@
-import reducers from "../reducers";
 
 const gotPhrases = (phrases) => {
     console.log("in action")
