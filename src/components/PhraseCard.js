@@ -1,6 +1,7 @@
 import React from "react";
 
 
+
 export default function PhraseCard(props) {
     const content = props.phrase.attributes.content
     const pinyin = props.phrase.attributes.pinyin
