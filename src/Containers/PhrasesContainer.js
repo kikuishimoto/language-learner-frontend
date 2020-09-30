@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import PhraseCard from "../components/PhraseCard";
 import { connect } from 'react-redux';
 import { fetchPhrases } from "../actions/phrasesActions";
+import PhraseInput from "../components/PhraseInput"
 
 class PhrasesContainer extends React.Component {
     componentDidMount() {
         this.props.fetchPhrases();
-
-        console.log("1")
     }
 
     renderPhraseCards() {
@@ -26,6 +25,7 @@ class PhrasesContainer extends React.Component {
         return (
             <div>
                 <h1>hi</h1>
+                <PhraseInput />
                 {this.renderPhraseCards()}
                 
                 
