@@ -20,8 +20,8 @@ class App extends Component {
             <Route exact path='/' component={Welcome}/>
             <Route exact path='/phrases' component={PhrasesContainer} />
             <Route exact path='/categories' component={CategoriesContainer} />
-            <Route exact path='/' component={TutorsContainer}/>
-            <Route exact path='/' component={ListsContainer}/>
+            <Route exact path='/tutors' component={TutorsContainer}/>
+            <Route exact path='/lists' component={ListsContainer}/>
           </Switch>
 
         </div>
