@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PhraseCard from "../components/PhraseCard";
 import { connect } from 'react-redux';
 import { fetchPhrases } from "../actions/phrasesActions";
-import PhraseInput from "../components/PhraseInput"
+import PhraseInput from "../components/PhraseInput";
+import { Link } from "react-router-dom";
 
 class PhrasesContainer extends React.Component {
     componentDidMount() {
@@ -23,9 +24,10 @@ class PhrasesContainer extends React.Component {
     }
     render() {
         return (
-            <div>
-                <h1>hi</h1>
-                <PhraseInput />
+            <div id="PhrasesContainer">
+                
+                <h2>All Phrases</h2>
+                <Link to="phrases/new">📝 Add a new phrase</Link><br></br>
                 {this.renderPhraseCards()}
                 
                 
