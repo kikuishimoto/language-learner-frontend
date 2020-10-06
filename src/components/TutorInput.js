@@ -13,7 +13,7 @@ function TutorInput(props) {
         const tutor = {
             name: name,
             email: email,
-            decription: description,
+            description: description,
             image: image
         }
 
@@ -34,28 +34,28 @@ function TutorInput(props) {
                     type="text"
                     onChange={(e) => setName(e.target.value)}
                     value={name}
-                />
+                /><br />
                 <label> Email: </label>
                 <input
                     name="email"
                     type="text"
                     onChange={(e)=> setEmail(e.target.value)}
                     value={email}
-                />
+                /><br />
                 <label>Description: </label>
                 <input
                     name="description"
                     type="text"
                     onChange={(e)=> setDescription(e.target.value)}
                     value={description}
-                />
+                /><br />
                 <label>Image URL:</label>
                 <input
                     name="image"
                     type="text"
                     onChange={(e)=> setImage(e.target.value)}
                     value={image}
-                />
+                /><br/>
                 <input type="submit" value="Create Tutor"/>
             </form>
         </div>
