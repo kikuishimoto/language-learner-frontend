@@ -15,6 +15,7 @@ class TutorsContainer extends Component {
         let allTutors;
         //if (this.props.tutorsReducer.tutors.data) {
         allTutors = this.props.tutorsReducer.tutors
+        debugger
         //} else {
         //    allTutors = this.props.tutorsReducer.tutors
         //}
@@ -26,6 +27,7 @@ class TutorsContainer extends Component {
     render() {
         return (
             <div>
+                <h2>All Tutors</h2>
                 <TutorInput />
                 {this.renderTutors()}
 
