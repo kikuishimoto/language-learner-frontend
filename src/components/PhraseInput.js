@@ -23,10 +23,13 @@ function PhraseInput(props) {
         setPinyin("");
         setCategory("");
         setImage("");
+
+
     }
 
     return (
-        <div>
+        <div className="phrase-form">
+            <h3> Add a new phrase! </h3>
             <form onSubmit={handleSubmit}>
                 <label>Word/Phrase(in english):</label>
                 <input 
@@ -34,28 +37,28 @@ function PhraseInput(props) {
                     type="text"
                     onChange={(e) => setContent(e.target.value)}
                     value={content}
-                />
+                /><br/>
                 <label> Word/Phrase(in Pinyin): </label>
                 <input
                     name="pinyin"
                     type="text"
                     onChange={(e)=> setPinyin(e.target.value)}
                     value={pinyin}
-                />
+                /><br/>
                 <label>Category: </label>
                 <input
                     name="category"
                     type="text"
                     onChange={(e)=> setCategory(e.target.value)}
                     value={category}
-                />
+                /><br/>
                 <label>Image URL:</label>
                 <input
                     name="image"
                     type="text"
                     onChange={(e)=> setImage(e.target.value)}
                     value={image}
-                />
+                /><br></br>
                 <input type="submit" value="Add Phrase"/>
             </form>
         </div>
