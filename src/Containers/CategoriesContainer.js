@@ -2,27 +2,49 @@ import React, { Component } from 'react';
 import Categories from '../components/Categories'
 import { connect } from 'react-redux';
 import { fetchCategories } from "../actions/categoriesActions";
+import CategoryShow from "../components/CategoryShow";
+
+import {
+    Switch,
+    Route
+  } from "react-router-dom";
+  
 class CategoriesContainer extends Component {
     componentDidMount = () => {
         this.props.fetchCategories()
     }
     renderCategoriesCards() {
         let allCategories;
-        if (this.props.categoriesReducer.categories.data){
-            allCategories = this.props.categoriesReducer.categories.data
-        } else {
-            allCategories = this.props.categoriesReducer.categories
-        }
+        
+        allCategories = this.props.categoriesReducer.categories
+        
 
         return allCategories.map((category) => {
             return <Categories key={category.id} category={category} />
         })
     }
+ 
     render() {
        
         return (
-            <div>
-                {this.renderCategoriesCards()}
+            <div id="CategoriesContainer">
+                <Switch>
+                    <Route exact path="/categories/:id"
+                    component={({match}) => {
+                        return (
+                            <CategoryShow
+                            id={match.params.id}
+                            categories= {this.props.categoriesReducer.categories}
+                            />
+                        )
+                        
+                    }}
+                    />
+                    <Route exact path="/categories">
+                        {this.renderCategoriesCards()}
+                    </Route>
+                </Switch>
+                
                 
 
             </div>
