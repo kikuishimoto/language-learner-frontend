@@ -1,20 +1,29 @@
-import React from "react";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from "react-router";
+import PhraseCard from "./PhraseCard";
+import { fetchCategory } from "../actions/categoriesActions"
 
 
-export default function CategoryShow(props) {
-    
-    const category = props.categories.find((category) => category.id === props.id);
-
-    function renderCategory() {
-        if (category) {
-            return (
-                <h1>{category.name}</h1>
-
-            )
-        }
-        else {
-            return <h1> Loading... </h1>
+class CategoryShow extends Component {
+    componentDidMount= () => {
+        let id = this.props.id
+        if (this.props.categories === [] ){
+            debugger
+            this.props.fetchCategory(id)
         }
     }
-    return <div> {renderCategory()}</div>
+    render() {
+        return (
+            
+            <div> hello </div>
+
+        )
+    }
+
 }
+const mapStateToProps = (state) => {
+    return state
+ }
+
+export default connect(mapStateToProps, {fetchCategory})(CategoryShow)

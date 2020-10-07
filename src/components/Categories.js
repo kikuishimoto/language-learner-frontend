@@ -1,15 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 export default function Categories(props) {
     const name = props.category.attributes.name
     const id = props.category.id
-    const phrases = props.category.relationships.phrases.data
     
 
     return (
         <div className="card" id={`category-${id}`} >
-            <button>{name}</button>
+            <Link to= {`/categories/${id}`}>
+                {name}
+            </Link>
 
         </div>
     )

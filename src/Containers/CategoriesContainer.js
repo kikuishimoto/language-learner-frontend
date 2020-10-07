@@ -23,9 +23,10 @@ class CategoriesContainer extends Component {
             return <Categories key={category.id} category={category} />
         })
     }
+    
  
     render() {
-       
+        if (this.props.categoriesReducer.categories !== []){
         return (
             <div id="CategoriesContainer">
                 <Switch>
@@ -35,6 +36,7 @@ class CategoriesContainer extends Component {
                             <CategoryShow
                             id={match.params.id}
                             categories= {this.props.categoriesReducer.categories}
+
                             />
                         )
                         
@@ -49,10 +51,14 @@ class CategoriesContainer extends Component {
 
             </div>
         )
+    } else {
+        return <h1>Loading</h1>
     }
 }
+}
  const mapStateToProps = (state) => {
-    return state
+   
+    return state;
 }
 
 export default connect(mapStateToProps, {fetchCategories})(CategoriesContainer)
