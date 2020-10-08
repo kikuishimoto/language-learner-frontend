@@ -1,5 +1,7 @@
-import React from "react";
+
 import "./Tutor.css"
+import React, { useState } from "react";
+
 
 
 export default function Tutors(props) {
@@ -8,7 +10,11 @@ export default function Tutors(props) {
     const image = props.tutor.attributes.image
     const description = props.tutor.attributes.description
     const id = props.tutor.id
+    const [like, setLike] = useState(0);
 
+    const handleOnClick = () => {
+        setLike(like+1)
+    }
     return (
         <div className="card" id={`tutor-${id}`}>
             <img src={image} alt="Avatar" ></img>
@@ -18,6 +24,8 @@ export default function Tutors(props) {
             <p>{email}</p>
             <strong> Description: </strong>
             <p> {description} </p>
+
+            {like}<button onClick={() => setLike(like+1)}> like </button>
             </div>
             
 

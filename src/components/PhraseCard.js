@@ -22,6 +22,7 @@ export default function PhraseCard(props) {
                 <div className="flip-card-front">
                     <h2>{pinyin}</h2>
                     <img src={image} className="phrase-avatar" />
+                    
                 </div>
                     
                 <div className="flip-card-back" >  

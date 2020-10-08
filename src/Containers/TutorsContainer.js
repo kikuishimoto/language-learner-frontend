@@ -36,7 +36,7 @@ class TutorsContainer extends Component {
     }
     
 }
-const mapSateToProps = (state) => {
+const mapStateToProps = (state) => {
     return state
 }
-export default connect(mapSateToProps, {fetchTutors})(TutorsContainer)
+export default connect(mapStateToProps, {fetchTutors})(TutorsContainer)

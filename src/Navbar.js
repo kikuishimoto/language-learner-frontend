@@ -1,13 +1,15 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import './NavBar.css';
 
 const link = {
-  width: '100px',
-  padding: '12px',
-  margin: '0 6px 6px',
-  background: 'blue',
+  width: '1px',
+  padding: '19px',
+  margin: '0 9px 6px',
+  background: 'beige',
   textDecoration: 'none',
-  color: 'white',
+  color: 'black',
+  paddingTop: "10px",
 }
 
 class Navbar extends React.Component {
@@ -15,33 +17,15 @@ class Navbar extends React.Component {
     return (
       <div>
         <header>
-        <NavLink
-          to="/"
-          /* set exact so it knows to only set activeStyle when route is deeply equal to link */
-          exact
-          /* add styling to Navlink */
-          style={link}
-          /* add prop for activeStyle */
-          activeStyle={{
-            background: 'darkblue'
-          }}
-        >Home</NavLink>
-        <NavLink
-          to="/phrases"
-          exact
-          style={link}
-          activeStyle={{
-            background: 'darkblue'
-          }}
-        >Phrases</NavLink>
-        <NavLink
-          to="/tutors"
-          exact
-          style={link}
-          activeStyle={{
-            background: 'darkblue'
-          }}
-        >Tutors</NavLink>
+          <img src="https://image.flaticon.com/icons/png/512/1377/1377974.png" />
+          <nav>
+            <ul>
+              <li><NavLink to="/">🏠 Home</NavLink></li>
+              <li><NavLink to="/phrases">Phrases</NavLink></li>
+              <li><NavLink to="/tutors">Tutors</NavLink></li>
+              <li><NavLink to="/categories">Categories</NavLink></li>
+            </ul>
+          </nav>
         </header>
       </div>
     )

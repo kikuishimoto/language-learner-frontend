@@ -21,6 +21,9 @@ class App extends Component {
         <div className="App">
           <NavBar />
           <br></br>
+          <br></br><br></br>
+          <br></br>
+
           
           <Switch>
             <Route exact path='/' component={Welcome}/>

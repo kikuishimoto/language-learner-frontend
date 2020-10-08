@@ -26,9 +26,11 @@ export const createTutor = (tutor) => {
             },
             body: JSON.stringify(tutor)
         };
+        console.log("c")
         fetch("http://127.0.0.1:3000/tutors", configObj)
         .then((res)=> res.json())
         .then((newTutor)=> {
+            console.log("d")
             dispatch(addTutor(newTutor))
         });
 

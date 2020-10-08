@@ -9,9 +9,11 @@ export default function Categories(props) {
 
     return (
         <div className="card" id={`category-${id}`} >
-            <Link to= {`/categories/${id}`}>
+            <br></br>
+           <h2> <Link to= {`/categories/${id}`}>
                 {name}
             </Link>
+            </h2>
 
         </div>
     )

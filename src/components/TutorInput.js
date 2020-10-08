@@ -16,8 +16,9 @@ function TutorInput(props) {
             description: description,
             image: image
         }
-
+        console.log("a")
         props.createTutor(tutor)
+        console.log("b")
 
         setName("");
         setEmail("");

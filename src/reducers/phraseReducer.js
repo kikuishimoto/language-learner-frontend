@@ -6,7 +6,6 @@ export default function phraseReducer(
             case "FETCHING_PHRASES":
                 return {...state, loading: true}
             case "ADDED_PHRASE":
-                debugger
                 return {...state, phrases: [...state.phrases, action.payload.data]}
             default:
                 return state;

@@ -1,0 +1,25 @@
+header img {
+    height: 80px;
+}
+header {
+    background-color: beige;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+}
+header * {
+    display: inline;
+}
+header li {
+    margin: 20px;
+}
+header li a {
+    color: black;
+    text-decoration: none;
+}

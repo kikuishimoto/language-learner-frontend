@@ -10,13 +10,14 @@ import {
   } from "react-router-dom";
   
 class CategoriesContainer extends Component {
-    componentDidMount = () => {
+    componentDidMount() {
         this.props.fetchCategories()
     }
-    renderCategoriesCards() {
+    renderCategoriesCards = () => {
         let allCategories;
         
         allCategories = this.props.categoriesReducer.categories
+
         
 
         return allCategories.map((category) => {
@@ -28,9 +29,12 @@ class CategoriesContainer extends Component {
     render() {
         if (this.props.categoriesReducer.categories !== []){
         return (
+            
             <div id="CategoriesContainer">
+                
                 <Switch>
                     <Route exact path="/categories/:id"
+                    // component={ CategoryShow }
                     component={({match}) => {
                         return (
                             <CategoryShow
@@ -43,6 +47,7 @@ class CategoriesContainer extends Component {
                     }}
                     />
                     <Route exact path="/categories">
+                    <h1>All Categories</h1>
                         {this.renderCategoriesCards()}
                     </Route>
                 </Switch>
